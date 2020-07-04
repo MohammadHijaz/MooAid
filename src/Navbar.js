@@ -7,19 +7,19 @@ import FormControl from 'react-bootstrap/FormControl'
 import logo from './Images/logo.jpeg'
 const navigantionBar = () => {
     return (
-        <Navbar bg="light" expand="lg">
-            <Navbar.Brand href="/"><img src={logo} style={{ width: "120px", height: "60px" }}></img></Navbar.Brand>
+        <Navbar bg="light" expand="lg" style={{ display: "flex", flexDirection: "row-reverse" }}>
+            <Navbar.Brand href="/"><img src={logo} style={{ width: "120px", height: "60px", }}></img></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="mr-auto">
-                    <Nav.Link href="/">Home</Nav.Link>
-                    <Nav.Link href="/link">Quiz</Nav.Link>
+                <Nav className="mr-auto" style={{ display: "flex", flexDirection: "row-reverse", width: "100%" }}>
+                    <Nav.Link href="/" style={{ marginRight: "1em" }}>الصفحة الرئيسية</Nav.Link>
+                    <Nav.Link href="/quiz">الامتحان</Nav.Link>
                 </Nav>
-                <Form inline>
-                    <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                    <Button variant="outline-success">Search</Button>
-                </Form>
             </Navbar.Collapse>
+            <Form inline>
+                <Button style={{ marginRight: "1em" }} variant="outline-success">البحث</Button>
+                <FormControl type="text" placeholder="أبحث" className="mr-sm-2" />
+            </Form>
         </Navbar>
     )
 }
