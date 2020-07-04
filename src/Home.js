@@ -23,7 +23,7 @@ const useStyles = makeStyles({
     }
 });
 
-export default function Home() {
+const Home = () => {
     const classes = useStyles();
     return (
         <div className={classes.container}>
@@ -52,3 +52,4 @@ export default function Home() {
         </div>
     )
 }
+export default Home;

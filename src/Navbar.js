@@ -4,14 +4,15 @@ import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Form from 'react-bootstrap/Form'
 import FormControl from 'react-bootstrap/FormControl'
-function navigantionBar() {
+import logo from './Images/logo.jpeg'
+const navigantionBar = () => {
     return (
         <Navbar bg="light" expand="lg">
-            <Navbar.Brand href="#home">kids-hospital</Navbar.Brand>
+            <Navbar.Brand href="/"><img src={logo} style={{ width: "120px", height: "60px" }}></img></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
-                    <Nav.Link href="/home">Home</Nav.Link>
+                    <Nav.Link href="/">Home</Nav.Link>
                     <Nav.Link href="/link">Quiz</Nav.Link>
                 </Nav>
                 <Form inline>
