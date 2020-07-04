@@ -4,6 +4,8 @@ import head from "./Images/head.jpg";
 import cut from "./Images/cut.jpg";
 import nosebleed from "./Images/nosebleed.jpg";
 import bee from "./Images/boy.png";
+import broken from "./Images/broken.png";
+import toxic from "./Images/toxic.png";
 const useStyles = makeStyles({
   container: {
     display: "flex",
@@ -26,7 +28,7 @@ const useStyles = makeStyles({
   text: {
     fontSize: "25px",
     marginTop: "30px",
-    marginBottom: "30px"
+    marginBottom: "30px",
   },
 });
 
@@ -43,6 +45,10 @@ const Home = () => {
           <img src={cut} className={classes.img}></img>
           <h1 className={classes.text}>الجروح</h1>
         </div>
+        <div>
+          <img src={toxic} className={classes.img}></img>
+          <h1 className={classes.text}>ابتلاع المواد الكيماوية</h1>
+        </div>
       </div>
       <div className={classes.column}>
         <div>
@@ -52,6 +58,10 @@ const Home = () => {
         <div>
           <img src={bee} className={classes.img}></img>
           <h1 className={classes.text}>اللدغات و اللسعات </h1>
+        </div>
+        <div>
+          <img src={broken} className={classes.img}></img>
+          <h1 className={classes.text}> الكسور </h1>
         </div>
       </div>
     </div>
