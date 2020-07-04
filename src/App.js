@@ -12,8 +12,8 @@ function App() {
           <Route exact path="/">
             <Cow />
           </Route>
-          <Route path="/cow">
-            <Cow />
+          <Route path="/home">
+            <Home />
           </Route>
         </Switch>
       </Router>
