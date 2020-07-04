@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import head from "./Images/head.jpg";
 import cut from "./Images/cut.jpg";
 import nosebleed from "./Images/nosebleed.jpg";
-import bee from "./Images/bee.jpg";
+import bee from "./Images/boy.png";
 const useStyles = makeStyles({
   container: {
     display: "flex",
@@ -17,14 +17,16 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
     textAlign: "center",
+    alignItems: "space-around",
   },
   img: {
     width: "200px",
     height: "200px",
   },
   text: {
-    paddingTop: 15,
     fontSize: "25px",
+    marginTop: "30px",
+    marginBottom: "30px"
   },
 });
 
@@ -37,7 +39,6 @@ const Home = () => {
           <img src={head} className={classes.img}></img>
           <h1 className={classes.text}>اصابات الرأس</h1>
         </div>
-
         <div>
           <img src={cut} className={classes.img}></img>
           <h1 className={classes.text}>الجروح</h1>

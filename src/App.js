@@ -12,6 +12,9 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
+          <Route path="/cow">
+            <Cow />
+          </Route>
         </Switch>
       </Router>
     </React.Fragment>
