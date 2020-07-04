@@ -6,10 +6,11 @@ const useStyles = makeStyles({
   container: {
     display: "flex",
     flexDirection: "row",
-    justifyContent: "space-around",
+    justifyContent: "flex-start",
+    position: "absolute",
     height: "100%",
     width: "100%",
-    paddingTop: 25,
+    marginTop: "25px"
   },
   img: {
     width: "200px",
@@ -19,7 +20,7 @@ const useStyles = makeStyles({
 const Fractures = () => {
   const classes = useStyles();
   return (
-    <div>
+    <div className={classes.container}>
       <div>
         <img src={brokenarm} className={classes.img}></img>
         <img src={fixedarm} style={{ width: "190px", height: "250px" }}></img>
