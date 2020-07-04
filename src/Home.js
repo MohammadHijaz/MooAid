@@ -1,55 +1,59 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import boy from './Images/boy.jpg';
-import baby from './Images/kid.jpeg';
-import dump from './Images/dump.jpg';
-import money from './Images/money.jpeg';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import head from "./Images/head.jpg";
+import cut from "./Images/cut.jpg";
+import nosebleed from "./Images/nosebleed.jpg";
+import bee from "./Images/bee.jpg";
 const useStyles = makeStyles({
-    container: {
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-around",
-        height: "100%",
-        width: "100%",
-    },
-    column: {
-        display: "flex",
-        flexDirection: "column",
-        textAlign: "center"
-    },
-    img: {
-        width: "500px",
-        height: "500px"
-    }
+  container: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-around",
+    height: "100%",
+    width: "100%",
+    paddingTop: 25,
+  },
+  column: {
+    display: "flex",
+    flexDirection: "column",
+    textAlign: "center",
+  },
+  img: {
+    width: "200px",
+    height: "200px",
+  },
+  text: {
+    paddingTop: 15,
+    fontSize: "25px",
+  },
 });
 
 const Home = () => {
-    const classes = useStyles();
-    return (
-        <div className={classes.container}>
-            <div className={classes.column}>
-                <div>
-                    <h1>ماذا تفعل عند الرعاف</h1>
-                    <img src={boy} className={classes.img}></img>
-                </div>
-
-                <div>
-                    <h1>كيف تقوم بالاسعافات الأولية</h1>
-                    <img src={baby} className={classes.img}></img>
-                </div>
-            </div>
-            <div className={classes.column}>
-                <div>
-                    <h1>ماذا تفعل لو وقع صديقك أثناء لعبكم للكرة</h1>
-                    <img src={dump} className={classes.img}></img>
-                </div>
-                <div>
-                    <h1>How to make money </h1>
-                    <img src={money} className={classes.img}></img>
-                </div>
-
-            </div>
+  const classes = useStyles();
+  return (
+    <div className={classes.container}>
+      <div className={classes.column}>
+        <div>
+          <img src={head} className={classes.img}></img>
+          <h1 className={classes.text}>اصابات الرأس</h1>
         </div>
-    )
-}
+
+        <div>
+          <img src={cut} className={classes.img}></img>
+          <h1 className={classes.text}>الجروح</h1>
+        </div>
+      </div>
+      <div className={classes.column}>
+        <div>
+          <img src={nosebleed} className={classes.img}></img>
+          <h1 className={classes.text}>نزيف الأنف و الرعاف</h1>
+        </div>
+        <div>
+          <img src={bee} className={classes.img}></img>
+          <h1 className={classes.text}>اللدغات و اللسعات </h1>
+        </div>
+      </div>
+    </div>
+  );
+};
 export default Home;

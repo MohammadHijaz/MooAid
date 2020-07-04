@@ -1,6 +1,7 @@
-import React from 'react'
-import Home from './Home.js'
-import Nav from './Navbar.js'
+import React from "react";
+import Home from "./Home.js";
+import Nav from "./Navbar.js";
+import Cow from "./cow.js";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 function App() {
   return (
@@ -12,11 +13,9 @@ function App() {
             <Home />
           </Route>
         </Switch>
-
       </Router>
     </React.Fragment>
-
-  )
+  );
 }
 
-export default App
+export default App;
