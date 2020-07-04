@@ -5,7 +5,7 @@ import cow from "./Images/cow.png";
 const useStyles = makeStyles({
   container: {
     display: "flex",
-    flexFlow: "row wrap",
+    flexDirection: "row",
     justifyContent: "space-around",
     height: "100%",
     width: "100%",
@@ -13,10 +13,12 @@ const useStyles = makeStyles({
   },
   img: {
     width: "500px",
-    height: "500px",
+    height: "600px",
+  },
+  button: {
+    display: "flex",
   },
 });
-
 const Cow = () => {
   const classes = useStyles();
   return (
@@ -25,7 +27,7 @@ const Cow = () => {
         <img src={cow} className={classes.img}></img>
       </div>
       <div className={classes.button}>
-        <Button variant="outlined" color="secondary">
+        <Button variant="outlined" size="large" style={{ color: "#e90916" }}>
           التالي
         </Button>
       </div>

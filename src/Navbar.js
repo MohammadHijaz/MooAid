@@ -5,6 +5,7 @@ import Nav from "react-bootstrap/Nav";
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import logo from "./Images/logo.png";
+import SearchIcon from "@material-ui/icons/Search";
 const navigantionBar = () => {
   return (
     <Navbar

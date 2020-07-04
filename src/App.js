@@ -10,7 +10,7 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/">
-            <Home />
+            <Cow />
           </Route>
           <Route path="/cow">
             <Cow />
