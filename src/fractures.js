@@ -5,8 +5,8 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles({
   container: {
     display: "flex",
-    flexDirection: "row",
-    justifyContent: "flex-start",
+    flexDirection: "column",
+    alignItems: "center",
     position: "absolute",
     height: "100%",
     width: "100%",
@@ -21,9 +21,17 @@ const Fractures = () => {
   const classes = useStyles();
   return (
     <div className={classes.container}>
-      <div>
+      <div style={{
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "flex-start",
+        alignSelf: "flex-start"
+      }}>
         <img src={brokenarm} className={classes.img}></img>
         <img src={fixedarm} style={{ width: "190px", height: "250px" }}></img>
+      </div>
+      <div>
+        sssss
       </div>
     </div>
   );
