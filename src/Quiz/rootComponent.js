@@ -5,14 +5,12 @@ class RootComponent extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            answers: [],
-            shouldYouCopyArray: true,
             total: Questions.length,
             score: 0,
         }
     }
     render() {
-        const newQuestion = Questions.map(item => <Quiz
+        const newQuestions = Questions.map(item => <Quiz
             id={item.id}
             firstQuestion={item.firstQuestion}
             firstAnswer={item.firstAnswer}
@@ -27,8 +25,8 @@ class RootComponent extends Component {
         />
         )
         return (
-            <div style={{ display: "flex", flexDirection: "column" }}>
-                {newQuestion}
+            <div style={{ display: "flex", flexDirection: "column", flexWrap: "wrap" }}>
+                {newQuestions}
                 <h1 style={{ position: "fixed", alignSelf: "flex-start", marginTop: "3em" }}>المجموع : {this.state.score}</h1>
             </div >
 

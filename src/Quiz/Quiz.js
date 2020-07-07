@@ -123,7 +123,7 @@ const Quiz = (props) => {
             <div className={classes.containerColumn}>
                 <h1>السؤال : {props.id} / {props.total}</h1>
                 <h1>{props.firstQuestion}</h1>
-                {buttonDisabled && checked1 && props.answer !== 1 ? <div className={classes.wrongAnswerContainer}><h4 className={classes.boxedAnswer}>{props.thirdAnswer}</h4>
+                {buttonDisabled && checked1 && props.answer !== 1 ? <div className={classes.wrongAnswerContainer}><h4 className={classes.boxedAnswer}>{props.firstAnswer}</h4>
                     <input type="checkbox" checked={checked1} style={{ marginLeft: "1em", marginRight: "0.5em", transform: "scale(1.5)" }} onChange={handleChange1} /></div>
                     : <div className={buttonDisabled && props.answer === 1 ? classes.correctAnswerContainer : classes.normalContatiner}>
                         <h4 className={buttonDisabled && props.answer === 1 ? classes.boxedAnswer : classes.normalAnswer}>{props.firstAnswer}</h4>
