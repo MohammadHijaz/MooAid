@@ -15,7 +15,8 @@ const Questions = [
         firstAnswer: "أخبره ان يتجاهل الأمر لنكمل اللعب سويا",
         secondAnswer: "اتفقد يده لابحث عن اعراض الكسور",
         thirdAnswer: "اهلع واحبره ان هناك كسرا من دون تفقد الأعراض",
-        answer: 2,
+        answer: 3,
+        img: soccerInjury
     },
     {
         id: 3,
@@ -24,6 +25,7 @@ const Questions = [
         secondAnswer: "اتفقد يده لابحث عن اعراض الكسور",
         thirdAnswer: "اهلع واحبره ان هناك كسرا من دون تفقد الأعراض",
         answer: 2,
+        img: soccerInjury
     },
 
 
