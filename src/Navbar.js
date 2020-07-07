@@ -11,7 +11,7 @@ const navigantionBar = () => {
     <Navbar
       bg="light"
       expand="lg"
-      style={{ display: "flex", flexDirection: "row-reverse" }}
+      style={{ display: "flex", flexDirection: "row-reverse", }}
     >
       <Navbar.Brand href="/">
         <img src={logo} style={{ width: "120px", height: "60px" }}></img>

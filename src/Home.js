@@ -13,7 +13,7 @@ const useStyles = makeStyles({
     justifyContent: "space-around",
     height: "100%",
     width: "100%",
-    paddingTop: 25,
+    marginTop: "25px",
   },
   column: {
     display: "flex",

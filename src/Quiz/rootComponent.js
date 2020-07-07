@@ -1,37 +1,36 @@
 import React, { Component } from 'react'
 import Questions from './Questions.jsx';
 import Quiz from './Quiz.js'
-import Button from "@material-ui/core/Button";
 class RootComponent extends Component {
     constructor(props) {
         super(props)
-
         this.state = {
-            problem: Questions,
-            answers: []
-
+            answers: [],
+            shouldYouCopyArray: true,
+            total: Questions.length,
+            score: 0,
         }
     }
-
     render() {
-        const newQuestion = this.state.problem.map(item => <Quiz
-            key={item.id}
+        const newQuestion = Questions.map(item => <Quiz
+            id={item.id}
             firstQuestion={item.firstQuestion}
             firstAnswer={item.firstAnswer}
-            isFirstAnswerSelected={item.IsFirstAnswerSelected}
             secondAnswer={item.secondAnswer}
-            isSecondAnswerSelected={item.IsSecondAnswerSelected}
             thirdAnswer={item.thirdAnswer}
-            isThirdAnswerSelected={item.IsThirdAnswerSelected}
             answer={item.answer}
-            total={Questions.length}
+            total={this.state.total}
+            img={item.img}
+            updateScore={() => {
+                this.setState({ score: this.state.score + 1 })
+            }}
         />
         )
-        this.state.problem.map(item => this.setState({ answers: [...this.state.answers, item.answer] }))
         return (
-            <div>
+            <div style={{ display: "flex", flexDirection: "column" }}>
                 {newQuestion}
-            </div>
+                <h1 style={{ position: "fixed", alignSelf: "flex-start", marginTop: "3em" }}>المجموع : {this.state.score}</h1>
+            </div >
 
         )
     }
