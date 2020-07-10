@@ -118,7 +118,7 @@ const Quiz = (props) => {
     return (
         <div className={classes.bigContainer}>
             <div className={classes.imagesContainer}>
-                <img src={props.img} style={{ height: "300px", width: "300px", marginLeft: "auto" }}></img>
+                <img src={props.img} style={{ height: "300px", width: "300px", marginLeft: "auto", marginRight: "3.5em" }}></img>
             </div>
             <div className={classes.containerColumn}>
                 <h1>السؤال : {props.id} / {props.total}</h1>
