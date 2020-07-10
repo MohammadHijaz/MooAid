@@ -3,12 +3,14 @@ import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import cow from "./Images/cow.png";
 import hiddenCow from "./Images/hiddenCow.png"
+import { Link } from 'react-router-dom'
 const Images = [cow, hiddenCow];
 const useStyles = makeStyles({
   container: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-around",
+    alignItems: "center",
     height: "100%",
     width: "100%",
     marginTop: "25px"
@@ -19,7 +21,8 @@ const useStyles = makeStyles({
   },
   button: {
     alignSelf: "center",
-    width: "190px"
+    width: "190px",
+    color: "#e90916"
   },
 });
 const Cow = () => {
@@ -30,7 +33,6 @@ const Cow = () => {
   const handClick = () => {
     if (show < 1) {
       setShow(show + 1);
-      console.log(show);
       if (show == 0) {
         setText("اذهب الى الصفحة الرئيسية");
         setnavigate(true)
@@ -42,10 +44,10 @@ const Cow = () => {
       <div>
         <img src={Images[show % 2]} className={classes.img}></img>
       </div>
-      {navigate ? <a href="/home" className={classes.button}> <Button variant="outlined" size="large" style={{ color: "#e90916" }} onClick={handClick}>
+      {navigate ? <Link to="/home" className={classes.button}> <Button variant="outlined" size="large" style={{ color: "#e90916" }} onClick={handClick}>
         {text}
       </Button>
-      </a>
+      </Link>
         : <Button variant="outlined" size="large" style={{ color: "#e90916" }} onClick={handClick} className={classes.button}>
           {text}
         </Button>}

@@ -13,8 +13,8 @@ const useStyles = makeStyles({
     marginTop: "25px"
   },
   img: {
-    width: "200px",
-    height: "270px",
+    width: "500px",
+    height: "500px",
   },
 });
 const Fractures = () => {
@@ -28,7 +28,7 @@ const Fractures = () => {
         alignSelf: "flex-start"
       }}>
         <img src={brokenarm} className={classes.img}></img>
-        <img src={fixedarm} style={{ width: "190px", height: "250px" }}></img>
+        <img src={fixedarm} style={{ width: "500px", height: "500px" }}></img>
       </div>
       <div>
         sssss
