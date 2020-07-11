@@ -6,8 +6,9 @@ import DoneIcon from "@material-ui/icons/Done";
 import cleanTheWound from "./Images/cleanTheWound.png";
 import coverThewound from "./Images/coverTheWound.png";
 import washYourHands from "./Images/washYourHands.jpg";
+import stopTheBleeding from "./Images/stopTheBleeding.png";
 import text from "./Images/text.png";
-import stopTheBleeding from "./Images/stopTheBleeding.jpg";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(() => ({
   img: {
@@ -114,21 +115,23 @@ const Injury = () => {
           </div>
         </div>
         <div>
-          <Button
-            variant="outlined"
-            color="primary"
-            size="large"
-            style={{
-              color: "white",
-              backgroundColor: "#11b6e5",
-              width: "200px",
-              fontSize: "20px",
-              height: "50px",
-            }}
-          >
-            <DoneIcon />
-            تمت قراءته
-          </Button>
+          <Link to="/end">
+            <Button
+              variant="outlined"
+              color="primary"
+              size="large"
+              style={{
+                color: "white",
+                backgroundColor: "#11b6e5",
+                width: "200px",
+                fontSize: "20px",
+                height: "50px",
+              }}
+            >
+              <DoneIcon />
+              تمت قراءته
+            </Button>
+          </Link>
         </div>
       </div>
     </Grid>

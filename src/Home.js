@@ -22,15 +22,14 @@ const useStyles = makeStyles({
     flexDirection: "column",
     textAlign: "center",
     alignItems: "space-around",
-    marginRight: "10em"
+    marginRight: "10em",
   },
   columnRight: {
     display: "flex",
     flexDirection: "column",
     textAlign: "center",
     alignItems: "space-around",
-    marginLeft: "10em"
-
+    marginLeft: "10em",
   },
   img: {
     width: "200px",
@@ -125,9 +124,9 @@ const Home = () => {
               fontSize: "25px",
               marginTop: "30px",
               marginBottom: "30px",
-              backgroundColor: "#e41749",
+              backgroundColor: "#f6d743",
               borderRadius: "360px",
-              border: "5px solid #e41749",
+              border: "5px solid #f6d743",
               color: "white",
             }}
           >

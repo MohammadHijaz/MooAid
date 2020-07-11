@@ -5,7 +5,6 @@ const useStyles = makeStyles({
   bigContainer: {
     display: "flex",
     flexDirection: "row",
-    // border: "7px solid #b1d9e7",
   },
   containerColumn: {
     display: "flex",
@@ -13,7 +12,7 @@ const useStyles = makeStyles({
     flexDirection: "column",
     alignItems: "flex-end",
     width: "100%",
-    border: "7px solid #b1d9e7",
+    border: "7px solid #eeecda",
   },
   imagesContainer: {
     display: "flex",

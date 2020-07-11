@@ -8,6 +8,8 @@ import End from "./end.js";
 import Injury from "./Injury.js";
 import FirstInjury from "./FirstInjury.js";
 import Bites from "./Bites";
+import Emergency from "./emergency";
+
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 function App() {
   return (
@@ -38,6 +40,12 @@ function App() {
           </Route>
           <Route path="/bites">
             <Bites />
+          </Route>
+          <Route path="/end">
+            <End />
+          </Route>
+          <Route path="/emergency">
+            <Emergency />
           </Route>
         </Switch>
       </Router>

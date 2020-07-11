@@ -49,7 +49,9 @@ class RootComponent extends Component {
         {newQuestions}
         <h1
           style={{
-            border: "7px solid #b1d9e7",
+            border: "7px solid #eeecda",
+            borderRadius: "360px",
+            borderWidth: "7px",
             position: "fixed",
             alignSelf: "flex-start",
             marginTop: "3em",
