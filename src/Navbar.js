@@ -10,7 +10,7 @@ const navigantionBar = () => {
     <Navbar
       bg="light"
       expand="lg"
-      style={{ display: "flex", flexDirection: "row-reverse", }}
+      style={{ display: "flex", flexDirection: "row-reverse" }}
     >
       <Navbar.Brand href="/">
         <img src={logo} style={{ width: "120px", height: "60px" }}></img>
@@ -25,7 +25,7 @@ const navigantionBar = () => {
             width: "100%",
           }}
         >
-          <Nav.Link href="/" style={{ marginRight: "1em" }}>
+          <Nav.Link href="/home" style={{ marginRight: "1em" }}>
             الصفحة الرئيسية
           </Nav.Link>
           <Nav.Link href="/quiz">نشاطات </Nav.Link>
