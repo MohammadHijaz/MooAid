@@ -28,11 +28,9 @@ const Fractures = () => {
         alignSelf: "flex-start"
       }}>
         <img src={brokenarm} className={classes.img}></img>
-        <img src={fixedarm} style={{ width: "500px", height: "500px" }}></img>
+        <img src={fixedarm} className={classes.img}></img>
       </div>
-      <div>
-        sssss
-      </div>
+
     </div>
   );
 };

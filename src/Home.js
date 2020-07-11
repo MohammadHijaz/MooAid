@@ -17,11 +17,20 @@ const useStyles = makeStyles({
     width: "100%",
     marginTop: "25px",
   },
-  column: {
+  columnLeft: {
     display: "flex",
     flexDirection: "column",
     textAlign: "center",
     alignItems: "space-around",
+    marginRight: "10em"
+  },
+  columnRight: {
+    display: "flex",
+    flexDirection: "column",
+    textAlign: "center",
+    alignItems: "space-around",
+    marginLeft: "10em"
+
   },
   img: {
     width: "200px",
@@ -53,7 +62,7 @@ const Home = () => {
   const classes = useStyles();
   return (
     <div className={classes.container}>
-      <div className={classes.column}>
+      <div className={classes.columnRight}>
         <div className={classes.outline}>
           <img src={head} className={classes.img}></img>
           <h1
@@ -71,7 +80,7 @@ const Home = () => {
           </h1>
         </div>
         <Link to="/firstinjury">
-          <div className={classes.outline} s>
+          <div className={classes.outline}>
             <img src={cut} className={classes.img}></img>
             <h1
               style={{
@@ -108,7 +117,7 @@ const Home = () => {
       <div className={classes.cow}>
         <img src={intro} style={{ width: "350px", height: "400px" }}></img>
       </div>
-      <div className={classes.column}>
+      <div className={classes.columnLeft}>
         <div className={classes.outline}>
           <img src={nosebleed} className={classes.img}></img>
           <h1
