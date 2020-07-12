@@ -38,7 +38,7 @@ const Questions = [
     firstAnswer: "-اعلى من مستوى القلب",
     secondAnswer: "-ادنى من مستوى القلب",
     thirdAnswer: "هذا لا يهم بتاتا",
-    answer: 1,
+    answer: 2,
     img: Scorpion,
   },
   {
@@ -47,7 +47,7 @@ const Questions = [
     firstAnswer: "ان يتحرك المصاب قدر الامكان",
     secondAnswer: "ان نأخذ صورة للافعى",
     thirdAnswer: "ان نقوم بمص دماء الجرح بالفم",
-    answer: 1,
+    answer: 2,
     img: snake,
   },
   {
@@ -56,7 +56,7 @@ const Questions = [
     firstAnswer: "اقوم بنزعها حالا",
     secondAnswer: "ابقيها كما هي و اتوجه للطبيب فورا",
     thirdAnswer: "لا شيء مما سبق",
-    answer: 1,
+    answer: 2,
     img: sharpKnife,
   },
 ];

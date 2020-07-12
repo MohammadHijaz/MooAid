@@ -14,6 +14,7 @@ const useStyles = makeStyles(() => ({
   img: {
     marginTop: "30px",
     width: "280px",
+    height: "300px"
   },
   font: {
     fontSize: "150%",
@@ -67,74 +68,76 @@ const useStyles = makeStyles(() => ({
 const Injury = () => {
   const classes = useStyles();
   return (
-    <Grid item container className={classes.Agrid}>
-      <div className={classes.div}>
-        <img src={text} style={{ width: "50%", height: "auto" }} alt="" />
-      </div>
-      <div
-        style={{
-          height: "20px",
-          color: "#eeecda",
-        }}
-      >
-        <hr />
-      </div>
-
-      <div>
-        <div className={classes.imggrid}>
-          <div style={{ marginLeft: "10em" }}>
-            <img src={washYourHands} alt="" className={classes.img} />
-            <div className={classes.textdiv}>
-              <p className={classes.font2}>اغسل يديك جيداً</p>
-            </div>
-          </div>
-          <div>
-            <img src={stopTheBleeding} alt="" className={classes.img} />
-            <div className={classes.textdiv}>
-              <p className={classes.font2}>
-                اضغط على الجرح باستخدام قطعة قماش نظيفة لايقاف النزيف
-              </p>
-            </div>
-          </div>
+    <div style={{ textAlign: "center" }}>
+      <Grid item container className={classes.Agrid}>
+        <div className={classes.div}>
+          <img src={text} style={{ width: "50%", height: "auto" }} alt="" />
         </div>
-        <div className={classes.imggrid}>
-          <div>
-            <img src={cleanTheWound} alt="" className={classes.img} />
-            <div className={classes.textdiv}>
-              <p className={classes.font2}>قم بتنظيف و تعقيم الجرح</p>
-            </div>
-          </div>
-
-          <div>
-            <img src={coverThewound} alt="" className={classes.img} />
-            <div className={classes.textdiv}>
-              <p className={classes.font2}>
-                قم بتغطية الجرح و استبدل الضمادة كل فترة
-              </p>
-            </div>
-          </div>
+        <div
+          style={{
+            height: "20px",
+            color: "#eeecda",
+          }}
+        >
+          <hr />
         </div>
+
         <div>
-          <Link to="/end">
-            <Button
-              variant="outlined"
-              color="primary"
-              size="large"
-              style={{
-                color: "white",
-                backgroundColor: "#11b6e5",
-                width: "200px",
-                fontSize: "20px",
-                height: "50px",
-              }}
-            >
-              <DoneIcon />
+          <div className={classes.imggrid}>
+            <div style={{ marginLeft: "10em" }}>
+              <img src={washYourHands} alt="" className={classes.img} />
+              <div className={classes.textdiv}>
+                <p className={classes.font2}>اغسل يديك جيداً</p>
+              </div>
+            </div>
+            <div>
+              <img src={stopTheBleeding} alt="" className={classes.img} />
+              <div className={classes.textdiv}>
+                <p className={classes.font2}>
+                  اضغط على الجرح باستخدام قطعة قماش نظيفة لايقاف النزيف
+              </p>
+              </div>
+            </div>
+          </div>
+          <div className={classes.imggrid}>
+            <div>
+              <img src={cleanTheWound} alt="" className={classes.img} />
+              <div className={classes.textdiv}>
+                <p className={classes.font2}>قم بتنظيف و تعقيم الجرح</p>
+              </div>
+            </div>
+
+            <div>
+              <img src={coverThewound} alt="" className={classes.img} />
+              <div className={classes.textdiv}>
+                <p className={classes.font2}>
+                  قم بتغطية الجرح و استبدل الضمادة كل فترة
+              </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <Link to="/end">
+              <Button
+                variant="outlined"
+                color="primary"
+                size="large"
+                style={{
+                  color: "white",
+                  backgroundColor: "#11b6e5",
+                  width: "200px",
+                  fontSize: "20px",
+                  height: "50px",
+                }}
+              >
+                <DoneIcon />
               تمت قراءته
             </Button>
-          </Link>
+            </Link>
+          </div>
         </div>
-      </div>
-    </Grid>
+      </Grid>
+    </div>
   );
 };
 export default Injury;
