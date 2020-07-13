@@ -28,7 +28,7 @@ const navigantionBar = () => {
           <Nav.Link href="/home" style={{ marginRight: "1em" }}>
             الصفحة الرئيسية
           </Nav.Link>
-          <Nav.Link href="/quiz">نشاطات </Nav.Link>
+          <Nav.Link href="/activities">نشاطات </Nav.Link>
         </Nav>
       </Navbar.Collapse>
       <Form inline>

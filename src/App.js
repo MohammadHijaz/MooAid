@@ -9,6 +9,7 @@ import Injury from "./Injury.js";
 import FirstInjury from "./FirstInjury.js";
 import Bites from "./Bites";
 import Emergency from "./emergency";
+import Activities from "./activities";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 function App() {
@@ -46,6 +47,9 @@ function App() {
           </Route>
           <Route path="/emergency">
             <Emergency />
+          </Route>
+          <Route path="/activities">
+            <Activities />
           </Route>
         </Switch>
       </Router>
