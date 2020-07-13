@@ -1,13 +1,12 @@
 import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
 import intro from "./Images/cowbite.png";
 import bee from "./Images/bee.png";
 import spider from "./Images/spider.png";
 import snake from "./Images/snake.png";
 import scorpion from "./Images/scorpion.png";
 import Button from "@material-ui/core/Button";
-
-import { makeStyles } from "@material-ui/core/styles";
-
+import { Link } from "react-router-dom";
 const useStyles = makeStyles(() => ({
   img: {
     width: "350px",
@@ -43,19 +42,21 @@ const Bites = () => {
       <div className={classes.ButtonsDiv}>
         <div className={classes.div}>
           <img src={snake} alt="" className={classes.imgs} />
-          <Button
-            variant="outlined"
-            size="large"
-            style={{
-              color: "white",
-              backgroundColor: "#ff819f",
-              width: "200px",
-              fontSize: "20px",
-              height: "50px",
-            }}
-          >
-            لدغة الثعبان
-          </Button>
+          <Link to="/snake">
+            <Button
+              variant="outlined"
+              size="large"
+              style={{
+                color: "white",
+                backgroundColor: "#ff819f",
+                width: "200px",
+                fontSize: "20px",
+                height: "50px",
+              }}
+            >
+              لدغة الثعبان
+            </Button>
+          </Link>
         </div>
         <div className={classes.div}>
           <img src={bee} alt="" className={classes.imgs} />
@@ -80,19 +81,21 @@ const Bites = () => {
       <div>
         <div className={classes.div}>
           <img src={scorpion} alt="" className={classes.imgs} />
-          <Button
-            variant="outlined"
-            size="large"
-            style={{
-              color: "white",
-              backgroundColor: "#a86cd5",
-              width: "200px",
-              fontSize: "20px",
-              height: "50px",
-            }}
-          >
-            لسعة العقرب
-          </Button>
+          <Link to="/scorpion">
+            <Button
+              variant="outlined"
+              size="large"
+              style={{
+                color: "white",
+                backgroundColor: "#a86cd5",
+                width: "200px",
+                fontSize: "20px",
+                height: "50px",
+              }}
+            >
+              لسعة العقرب
+            </Button>
+          </Link>
         </div>
         <div className={classes.div}>
           <img src={spider} alt="" className={classes.imgs} />

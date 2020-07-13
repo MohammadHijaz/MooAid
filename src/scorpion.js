@@ -3,11 +3,11 @@ import { Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import DoneIcon from "@material-ui/icons/Done";
-import cleanTheWound from "./Images/cleanTheWound.png";
-import coverThewound from "./Images/coverTheWound.png";
-import washYourHands from "./Images/washYourHands.png";
-import stopTheBleeding from "./Images/stopTheBleeding.png";
-import Cow from "./Images/injuriesCow.png";
+import hospital from "./Images/hospitalScorpion.png";
+import ice from "./Images/iceScorpion.png";
+import calm from "./Images/calmScorpion.png";
+import pressure from "./Images/pressureScorpion.png";
+import Cow from "./Images/cowScorpion.png";
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(() => ({
@@ -15,10 +15,6 @@ const useStyles = makeStyles(() => ({
     marginTop: "30px",
     width: "280px",
     height: "300px",
-  },
-  font: {
-    fontSize: "150%",
-    color: "black",
   },
   font2: {
     display: "flex",
@@ -36,7 +32,7 @@ const useStyles = makeStyles(() => ({
     width: "900px",
     display: "flex",
     justifyContent: "center",
-    border: "11px solid #91dbe6",
+    border: "11px solid #c992c9",
     borderRadius: "360px",
   },
 
@@ -63,18 +59,20 @@ const useStyles = makeStyles(() => ({
     fontSize: "15px",
     marginTop: "30px",
     marginBottom: "30px",
-    backgroundColor: "#11b6e5",
+    backgroundColor: "#c992c9",
     border: "5px solid #eeecda",
   },
 }));
-const Injury = () => {
+const Scorpion = () => {
   const classes = useStyles();
   return (
     <div style={{ textAlign: "center" }}>
       <Grid item container className={classes.Agrid}>
-        <div className={classes.div}>
-          <img src={Cow} style={{ width: "50%", height: "auto" }} alt="" />
-        </div>
+        <Link to="/emergency">
+          <div className={classes.div}>
+            <img src={Cow} style={{ width: "50%", height: "auto" }} alt="" />
+          </div>
+        </Link>
         <div
           style={{
             height: "20px",
@@ -87,37 +85,38 @@ const Injury = () => {
         <div>
           <div className={classes.imggrid}>
             <div style={{ marginLeft: "10em" }}>
-              <img src={washYourHands} alt="" className={classes.img} />
+              <img src={calm} alt="" className={classes.img} />
               <div className={classes.textdiv}>
-                <p className={classes.font2}>اغسل يديك جيداً</p>
+                <p className={classes.font2}>احرص على تهدئة المصاب</p>
               </div>
             </div>
             <div>
-              <img src={stopTheBleeding} alt="" className={classes.img} />
+              <img src={pressure} alt="" className={classes.img} />
               <div className={classes.textdiv}>
                 <p className={classes.font2}>
-                  اضغط على الجرح باستخدام قطعة قماش نظيفة لايقاف النزيف
+                  ان أمكن كن في وضعية بحيث تكون اللدغة تحت مستوى قلبك
                 </p>
               </div>
             </div>
           </div>
           <div className={classes.imggrid}>
             <div>
-              <img src={cleanTheWound} alt="" className={classes.img} />
+              <img src={ice} alt="" className={classes.img} />
               <div className={classes.textdiv}>
-                <p className={classes.font2}>قم بتنظيف و تعقيم الجرح</p>
+                <p className={classes.font2}>
+                  اغسل الجرح و برده بوضع كمادات الثلج
+                </p>
               </div>
             </div>
 
             <div>
-              <img src={coverThewound} alt="" className={classes.img} />
+              <img src={hospital} alt="" className={classes.img} />
               <div className={classes.textdiv}>
-                <p className={classes.font2}>
-                  قم بتغطية الجرح و استبدل الضمادة كل فترة
-                </p>
+                <p className={classes.font2}>توجه الى الطبيب حالاً</p>
               </div>
             </div>
           </div>
+
           <div>
             <Link to="/end">
               <Button
@@ -126,7 +125,7 @@ const Injury = () => {
                 size="large"
                 style={{
                   color: "white",
-                  backgroundColor: "#11b6e5",
+                  backgroundColor: "#c992c9",
                   width: "200px",
                   fontSize: "20px",
                   height: "50px",
@@ -142,4 +141,4 @@ const Injury = () => {
     </div>
   );
 };
-export default Injury;
+export default Scorpion;

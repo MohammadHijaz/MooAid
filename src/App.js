@@ -10,7 +10,8 @@ import FirstInjury from "./FirstInjury.js";
 import Bites from "./Bites";
 import Emergency from "./emergency";
 import Activities from "./activities";
-
+import Snake from "./snake";
+import Scorpion from "./scorpion";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 function App() {
   return (
@@ -50,6 +51,12 @@ function App() {
           </Route>
           <Route path="/activities">
             <Activities />
+          </Route>
+          <Route path="/snake">
+            <Snake />
+          </Route>
+          <Route path="/scorpion">
+            <Scorpion />
           </Route>
         </Switch>
       </Router>
