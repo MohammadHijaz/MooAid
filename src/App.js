@@ -12,6 +12,8 @@ import Emergency from "./emergency";
 import Activities from "./activities";
 import Snake from "./snake";
 import Scorpion from "./scorpion";
+import Bee from "./bee";
+import Spider from "./spider.js";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 function App() {
   return (
@@ -57,6 +59,12 @@ function App() {
           </Route>
           <Route path="/scorpion">
             <Scorpion />
+          </Route>
+          <Route path="/bee">
+            <Bee />
+          </Route>
+          <Route path="/spider">
+            <Spider />
           </Route>
         </Switch>
       </Router>
