@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
+import ahsant from '../Sounds/ahsant.mp4'
+import useSound from 'use-sound';
 const useStyles = makeStyles({
   bigContainer: {
     display: "flex",
@@ -68,6 +70,7 @@ const useStyles = makeStyles({
 });
 const Quiz = (props) => {
   const classes = useStyles();
+  const [play, { stop }] = useSound(ahsant, { volume: 0.5 });
   const [checked1, setChecked1] = useState(false);
   const [checked2, setChecked2] = useState(false);
   const [checked3, setChecked3] = useState(false);
@@ -91,14 +94,17 @@ const Quiz = (props) => {
     if (props.answer === 1) {
       if (checked1) {
         props.updateScore();
+        play();
       }
     } else if (props.answer === 2) {
       if (checked2) {
         props.updateScore();
+        play();
       }
     } else if (props.answer === 3) {
       if (checked3) {
         props.updateScore();
+        play();
       }
     }
     setButtonDisabled(true);
@@ -136,34 +142,34 @@ const Quiz = (props) => {
             />
           </div>
         ) : (
-          <div
-            className={
-              buttonDisabled && props.answer === 1
-                ? classes.correctAnswerContainer
-                : classes.normalContatiner
-            }
-          >
-            <h4
+            <div
               className={
                 buttonDisabled && props.answer === 1
-                  ? classes.boxedAnswer
-                  : classes.normalAnswer
+                  ? classes.correctAnswerContainer
+                  : classes.normalContatiner
               }
             >
-              {props.firstAnswer}
-            </h4>
-            <input
-              type="checkbox"
-              checked={checked1}
-              style={{
-                marginLeft: "1em",
-                marginRight: "0.5em",
-                transform: "scale(1.5)",
-              }}
-              onChange={handleChange1}
-            />
-          </div>
-        )}
+              <h4
+                className={
+                  buttonDisabled && props.answer === 1
+                    ? classes.boxedAnswer
+                    : classes.normalAnswer
+                }
+              >
+                {props.firstAnswer}
+              </h4>
+              <input
+                type="checkbox"
+                checked={checked1}
+                style={{
+                  marginLeft: "1em",
+                  marginRight: "0.5em",
+                  transform: "scale(1.5)",
+                }}
+                onChange={handleChange1}
+              />
+            </div>
+          )}
         {buttonDisabled && checked2 && props.answer !== 2 ? (
           <div className={classes.wrongAnswerContainer}>
             <h4 className={classes.boxedAnswer}>{props.secondAnswer}</h4>
@@ -179,34 +185,34 @@ const Quiz = (props) => {
             />
           </div>
         ) : (
-          <div
-            className={
-              buttonDisabled && props.answer === 2
-                ? classes.correctAnswerContainer
-                : classes.normalContatiner
-            }
-          >
-            <h4
+            <div
               className={
                 buttonDisabled && props.answer === 2
-                  ? classes.boxedAnswer
-                  : classes.normalAnswer
+                  ? classes.correctAnswerContainer
+                  : classes.normalContatiner
               }
             >
-              {props.secondAnswer}
-            </h4>
-            <input
-              type="checkbox"
-              checked={checked2}
-              style={{
-                marginLeft: "1em",
-                marginRight: "0.5em",
-                transform: "scale(1.5)",
-              }}
-              onChange={handleChange2}
-            />
-          </div>
-        )}
+              <h4
+                className={
+                  buttonDisabled && props.answer === 2
+                    ? classes.boxedAnswer
+                    : classes.normalAnswer
+                }
+              >
+                {props.secondAnswer}
+              </h4>
+              <input
+                type="checkbox"
+                checked={checked2}
+                style={{
+                  marginLeft: "1em",
+                  marginRight: "0.5em",
+                  transform: "scale(1.5)",
+                }}
+                onChange={handleChange2}
+              />
+            </div>
+          )}
         {buttonDisabled && checked3 && props.answer !== 3 ? (
           <div className={classes.wrongAnswerContainer}>
             <h4 className={classes.boxedAnswer}>{props.thirdAnswer}</h4>
@@ -222,34 +228,34 @@ const Quiz = (props) => {
             />
           </div>
         ) : (
-          <div
-            className={
-              buttonDisabled && props.answer === 3
-                ? classes.correctAnswerContainer
-                : classes.normalContatiner
-            }
-          >
-            <h4
+            <div
               className={
                 buttonDisabled && props.answer === 3
-                  ? classes.boxedAnswer
-                  : classes.normalAnswer
+                  ? classes.correctAnswerContainer
+                  : classes.normalContatiner
               }
             >
-              {props.thirdAnswer}
-            </h4>
-            <input
-              type="checkbox"
-              checked={checked3}
-              style={{
-                marginLeft: "1em",
-                marginRight: "0.5em",
-                transform: "scale(1.5)",
-              }}
-              onChange={handleChange3}
-            />
-          </div>
-        )}
+              <h4
+                className={
+                  buttonDisabled && props.answer === 3
+                    ? classes.boxedAnswer
+                    : classes.normalAnswer
+                }
+              >
+                {props.thirdAnswer}
+              </h4>
+              <input
+                type="checkbox"
+                checked={checked3}
+                style={{
+                  marginLeft: "1em",
+                  marginRight: "0.5em",
+                  transform: "scale(1.5)",
+                }}
+                onChange={handleChange3}
+              />
+            </div>
+          )}
         <Button
           className={buttonDisabled ? classes.disabledbutton : classes.button}
           disabled={buttonDisabled}
