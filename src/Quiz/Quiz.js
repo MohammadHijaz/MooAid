@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import ahsant from '../Sounds/ahsant.mp4'
+import hawel from '../Sounds/7awelmartan2o5ra.mp4'
 import useSound from 'use-sound';
 const useStyles = makeStyles({
   bigContainer: {
@@ -70,7 +71,8 @@ const useStyles = makeStyles({
 });
 const Quiz = (props) => {
   const classes = useStyles();
-  const [play, { stop }] = useSound(ahsant, { volume: 0.5 });
+  const [play] = useSound(ahsant, { volume: 0.5 });
+  const [play2] = useSound(hawel, { volume: 0.5 });
   const [checked1, setChecked1] = useState(false);
   const [checked2, setChecked2] = useState(false);
   const [checked3, setChecked3] = useState(false);
@@ -96,15 +98,25 @@ const Quiz = (props) => {
         props.updateScore();
         play();
       }
+      else {
+        play2()
+      }
     } else if (props.answer === 2) {
       if (checked2) {
         props.updateScore();
         play();
       }
+      else {
+        play2()
+      }
     } else if (props.answer === 3) {
       if (checked3) {
         props.updateScore();
         play();
+      }
+      else {
+        play2();
+
       }
     }
     setButtonDisabled(true);

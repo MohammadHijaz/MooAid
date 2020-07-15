@@ -57,7 +57,7 @@ class RootComponent extends Component {
             marginTop: "3em",
           }}
         >
-          المجموع : {this.state.score}
+          المجموع : {this.state.score}/5
         </h1>
       </div>
     );
