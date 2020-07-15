@@ -101,19 +101,21 @@ const Bites = () => {
         </div>
         <div className={classes.div}>
           <img src={spider} alt="" className={classes.imgs} />
-          <Button
-            variant="outlined"
-            size="large"
-            style={{
-              color: "white",
-              backgroundColor: "#1a77b9",
-              width: "200px",
-              fontSize: "20px",
-              height: "50px",
-            }}
-          >
-            لدغة العنكبوت
-          </Button>
+          <Link to="/spider">
+            <Button
+              variant="outlined"
+              size="large"
+              style={{
+                color: "white",
+                backgroundColor: "#1a77b9",
+                width: "200px",
+                fontSize: "20px",
+                height: "50px",
+              }}
+            >
+              لدغة العنكبوت
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

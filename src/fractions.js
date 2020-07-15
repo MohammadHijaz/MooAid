@@ -3,11 +3,12 @@ import { Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import DoneIcon from "@material-ui/icons/Done";
-import clean from "./Images/washSpider.png";
-import Ice from "./Images/iceSpider.png";
-import Cow from "./Images/cowSpider.png";
+import calmfract from "./Images/calmfract.png";
+import doc from "./Images/doc.png";
+import icee from "./Images/icee.png";
+import dont from "./Images/dont.png";
+import Cowfract from "./Images/cowfract.png";
 import { Link } from "react-router-dom";
-
 const useStyles = makeStyles(() => ({
   img: {
     marginTop: "30px",
@@ -21,7 +22,7 @@ const useStyles = makeStyles(() => ({
     fontWeight: "bold",
     marginTop: "30px",
     marginBottom: "30px",
-    backgroundColor: "#93ca6d",
+    backgroundColor: "#fa7d09",
     border: "5px solid #eeecda",
   },
   font2: {
@@ -40,7 +41,7 @@ const useStyles = makeStyles(() => ({
     width: "900px",
     display: "flex",
     justifyContent: "center",
-    border: "11px solid #726a95",
+    border: "11px solid #fa7d09",
     borderRadius: "360px",
   },
 
@@ -67,18 +68,19 @@ const useStyles = makeStyles(() => ({
     fontSize: "15px",
     marginTop: "30px",
     marginBottom: "30px",
-    backgroundColor: "#726a95",
+    backgroundColor: "#fa7d09",
     border: "5px solid #eeecda",
   },
 }));
-const Spider = () => {
+const Fixfract = () => {
   const classes = useStyles();
   return (
     <div style={{ textAlign: "center" }}>
       <Grid item container className={classes.Agrid}>
         <div className={classes.div}>
-          <img src={Cow} style={{ width: "50%", height: "auto" }} alt="" />
+          <img src={Cowfract} style={{ width: "50%", height: "auto" }} alt="" />
         </div>
+
         <div
           style={{
             height: "20px",
@@ -91,20 +93,36 @@ const Spider = () => {
         <div>
           <div className={classes.imggrid}>
             <div style={{ marginLeft: "10em" }}>
-              <img src={clean} alt="" className={classes.img} />
+              <img src={calmfract} alt="" className={classes.img} />
               <div className={classes.textdiv}>
-                <p className={classes.font2}>
-                  القيام بغسل موقع اللدغة بالماء و الصابون
-                </p>
+                <p className={classes.font2}>ان تحاول تهدئة المصاب</p>
               </div>
             </div>
             <div>
-              <img src={Ice} alt="" className={classes.img} />
+              <img src={dont} alt="" className={classes.img} />
               <div className={classes.textdiv}>
-                <p className={classes.font2}>وضع الثلج لتقليل التورم</p>
+                <p className={classes.font2}>لا تحرك الجزء المصاب</p>
               </div>
             </div>
           </div>
+          <div className={classes.imggrid}>
+            <div>
+              <img src={icee} alt="" className={classes.img} />
+              <div className={classes.textdiv}>
+                <p className={classes.font2}>
+                  ضع ثلجا على الجزء المصاب لتخفيف الالم
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <img src={doc} alt="" className={classes.img} />
+              <div className={classes.textdiv}>
+                <p className={classes.font2}>اذهب لرؤية طبيب بشكل مباشر</p>
+              </div>
+            </div>
+          </div>
+
           <div>
             <Link to="/end">
               <Button
@@ -113,7 +131,7 @@ const Spider = () => {
                 size="large"
                 style={{
                   color: "white",
-                  backgroundColor: "#726a95",
+                  backgroundColor: "#fa7d09",
                   width: "200px",
                   fontSize: "20px",
                   height: "50px",
@@ -129,4 +147,4 @@ const Spider = () => {
     </div>
   );
 };
-export default Spider;
+export default Fixfract;

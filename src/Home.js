@@ -117,22 +117,25 @@ const Home = () => {
         <img src={intro} style={{ width: "350px", height: "400px" }}></img>
       </div>
       <div className={classes.columnLeft}>
-        <div className={classes.outline}>
-          <img src={nosebleed} className={classes.img}></img>
-          <h1
-            style={{
-              fontSize: "25px",
-              marginTop: "30px",
-              marginBottom: "30px",
-              backgroundColor: "#f6d743",
-              borderRadius: "360px",
-              border: "5px solid #f6d743",
-              color: "white",
-            }}
-          >
-            نزيف الأنف و الرعاف
-          </h1>
-        </div>
+        <Link to="/noseBleed">
+          <div className={classes.outline}>
+            <img src={nosebleed} className={classes.img}></img>
+            <h1
+              style={{
+                fontSize: "25px",
+                marginTop: "30px",
+                marginBottom: "30px",
+                backgroundColor: "#f6d743",
+                borderRadius: "360px",
+                border: "5px solid #f6d743",
+                color: "white",
+              }}
+            >
+              نزيف الأنف و الرعاف
+            </h1>
+          </div>
+        </Link>
+
         <Link to="/bites">
           <div className={classes.outline}>
             <img src={bee} className={classes.img}></img>
@@ -151,22 +154,24 @@ const Home = () => {
             </h1>
           </div>
         </Link>
-        <div className={classes.outline}>
-          <img src={broken} className={classes.img}></img>
-          <h1
-            style={{
-              fontSize: "25px",
-              marginTop: "30px",
-              marginBottom: "30px",
-              backgroundColor: "#fa1616",
-              borderRadius: "360px",
-              border: "5px solid #fa1616",
-              color: "white",
-            }}
-          >
-            الكسور
-          </h1>
-        </div>
+        <Link to="/fractions">
+          <div className={classes.outline}>
+            <img src={broken} className={classes.img}></img>
+            <h1
+              style={{
+                fontSize: "25px",
+                marginTop: "30px",
+                marginBottom: "30px",
+                backgroundColor: "#fa1616",
+                borderRadius: "360px",
+                border: "5px solid #fa1616",
+                color: "white",
+              }}
+            >
+              الكسور
+            </h1>
+          </div>
+        </Link>
       </div>
     </div>
   );

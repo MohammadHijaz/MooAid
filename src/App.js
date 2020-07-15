@@ -14,6 +14,8 @@ import Snake from "./snake";
 import Scorpion from "./scorpion";
 import Bee from "./bee";
 import Spider from "./spider.js";
+import NoseBleed from "./noseBleed.js";
+import Fixfract from "./fractions.js";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 function App() {
   return (
@@ -65,6 +67,12 @@ function App() {
           </Route>
           <Route path="/spider">
             <Spider />
+          </Route>
+          <Route path="/noseBleed">
+            <NoseBleed />
+          </Route>
+          <Route path="/fractions">
+            <Fixfract />
           </Route>
         </Switch>
       </Router>
