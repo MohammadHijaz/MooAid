@@ -34,6 +34,7 @@ const useStyles = makeStyles(() => ({
     justifyContent: "center",
     border: "11px solid #c992c9",
     borderRadius: "360px",
+    alignSelf: "center"
   },
 
   Agrid: {
@@ -66,13 +67,14 @@ const useStyles = makeStyles(() => ({
 const Scorpion = () => {
   const classes = useStyles();
   return (
-    <div style={{ textAlign: "center" }}>
+    <div style={{ textAlign: "center", display: "flex", flexDirection: "column" }}>
+      <Link to="/emergency" style={{ display: "flex", justifyContent: "center" }}>
+        <div className={classes.div}>
+          <img src={Cow} style={{ width: "50%", height: "auto" }} alt="" />
+        </div>
+      </Link>
       <Grid item container className={classes.Agrid}>
-        <Link to="/emergency">
-          <div className={classes.div}>
-            <img src={Cow} style={{ width: "50%", height: "auto" }} alt="" />
-          </div>
-        </Link>
+
         <div
           style={{
             height: "20px",

@@ -76,11 +76,13 @@ const useStyles = makeStyles(() => ({
 const Bee = () => {
   const classes = useStyles();
   return (
-    <div style={{ textAlign: "center" }}>
-      <Grid item container className={classes.Agrid}>
+    <div style={{ textAlign: "center", display: "flex", flexDirection: "column" }}>
+      <Link to="/emergency" style={{ display: "flex", justifyContent: "center" }}>
         <div className={classes.div}>
           <img src={Cow} style={{ width: "50%", height: "auto" }} alt="" />
         </div>
+      </Link>
+      <Grid item container className={classes.Agrid}>
 
         <div
           style={{

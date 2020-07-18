@@ -36,8 +36,9 @@ const useStyles = makeStyles(() => ({
     width: "900px",
     display: "flex",
     justifyContent: "center",
-    border: "11px solid #91dbe6",
+    border: "11px solid #c992c9",
     borderRadius: "360px",
+    alignSelf: "center"
   },
 
   Agrid: {
@@ -70,11 +71,11 @@ const useStyles = makeStyles(() => ({
 const Injury = () => {
   const classes = useStyles();
   return (
-    <div style={{ textAlign: "center" }}>
+    <div style={{ textAlign: "center", display: "flex", flexDirection: "column" }}>
+      <div className={classes.div}>
+        <img src={Cow} style={{ width: "50%", height: "auto" }} alt="" />
+      </div>
       <Grid item container className={classes.Agrid}>
-        <div className={classes.div}>
-          <img src={Cow} style={{ width: "50%", height: "auto" }} alt="" />
-        </div>
         <div
           style={{
             height: "20px",
@@ -83,7 +84,6 @@ const Injury = () => {
         >
           <hr />
         </div>
-
         <div>
           <div className={classes.imggrid}>
             <div style={{ marginLeft: "10em" }}>
