@@ -14,10 +14,6 @@ const useStyles = makeStyles({
     width: "100%",
     position: "absolute",
     marginTop: "25px",
-    // backgroundImage: `url(${background})`,
-    // backgroundRepeat: "no-repeat",
-    // backgroundSize: "cover",
-    // backgroundPosition: "center",
   },
   img: {
     width: "400px",

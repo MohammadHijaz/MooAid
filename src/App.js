@@ -2,7 +2,6 @@ import React from "react";
 import Home from "./Home.js";
 import Nav from "./Navbar.js";
 import Cow from "./cow.js";
-import Fractures from "./fractures.js";
 import Quiz from "./Quiz/rootComponent.js";
 import End from "./end.js";
 import Injury from "./Injury.js";
@@ -34,9 +33,6 @@ function App() {
           </Route>
           <Route path="/finished">
             <End />
-          </Route>
-          <Route path="/fractures">
-            <Fractures />
           </Route>
           <Route path="/injury">
             <Injury />

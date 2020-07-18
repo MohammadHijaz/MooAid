@@ -68,13 +68,13 @@ const useStyles = makeStyles(() => ({
 const NoseBleed = () => {
   const classes = useStyles();
   return (
-    <div style={{ textAlign: "center" }}>
+    <div style={{ textAlign: "center", display: "flex", flexDirection: "column" }}>
+      <Link to="/emergency" style={{ display: "flex", justifyContent: "center" }}>
+        <div className={classes.div}>
+          <img src={Cow} style={{ width: "50%", height: "auto" }} alt="" />
+        </div>
+      </Link>
       <Grid item container className={classes.Agrid}>
-        <Link to="/emergency">
-          <div className={classes.div}>
-            <img src={Cow} style={{ width: "50%", height: "auto" }} alt="" />
-          </div>
-        </Link>
         <div
           style={{
             height: "20px",

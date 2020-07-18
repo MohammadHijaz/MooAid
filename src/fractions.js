@@ -43,6 +43,7 @@ const useStyles = makeStyles(() => ({
     justifyContent: "center",
     border: "11px solid #fa7d09",
     borderRadius: "360px",
+    alignSelf: "center"
   },
 
   Agrid: {
@@ -75,12 +76,11 @@ const useStyles = makeStyles(() => ({
 const Fixfract = () => {
   const classes = useStyles();
   return (
-    <div style={{ textAlign: "center" }}>
+    <div style={{ textAlign: "center", display: "flex", flexDirection: "column" }}>
+      <div className={classes.div}>
+        <img src={Cowfract} style={{ width: "50%", height: "auto" }} alt="" />
+      </div>
       <Grid item container className={classes.Agrid}>
-        <div className={classes.div}>
-          <img src={Cowfract} style={{ width: "50%", height: "auto" }} alt="" />
-        </div>
-
         <div
           style={{
             height: "20px",
