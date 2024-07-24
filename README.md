@@ -1,1 +1,1 @@
-The idea of the app is to make a friendly learning enviroment about medicine for children between 3-10. By providing child-friendly articles and fun games. This app has a very child friendly design, voice support for children who can't read, and quizes to make learning more enjoyable.
+The idea of the app is to make a friendly learning environment about medicine for children between 3-10, by providing child-friendly articles and fun games. It has a very child-friendly design, voice support for children who can't read, and quizzes to make learning more enjoyable.
